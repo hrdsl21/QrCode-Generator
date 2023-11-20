@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family:  'Open Sans', sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    background-image: url('michiel-annaert-5f4nKAE5isE-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar h1{
+    font-size: 40px;
+    color: lightseagreen;
+    padding: 20px;
+}
+.navbar a{
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.navbar a:hover{
+    color: orange;
+}
+
+.main{
+    height: calc(100vh - 40vh);
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+        
+}
+h1{
+    font-size: 40px;
+    color: whitesmoke;
+    padding-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 4px;
+    color:whitesmoke;
+}
+li {
+    padding: 10px; 
+}
+a{
+    color: bisque;
+    cursor: pointer;
+    
+}
+a :hover{
+    color: orange;
+}
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+input{
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid bisque; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+input[type="submit"] {
+    cursor: pointer;
+    padding: 10px 30px; /* Adjust padding as needed */
+    border: 2px solid bisque;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"]:hover {
+    background-color: orange;
+}

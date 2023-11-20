@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>download qrkod page</title>
+</head>
+<body>
+    <div class="navbar">
+        
+    </div>
+    <div class="main">
+    <h1>Kody QR do pobrania:</h1>
+    <ul>
+        {% for filename in qrcode %}
+            <li>
+                <a href="{{ url_for('/download_qr/<filename>.DownloadQrcodeFile', filename=filename, file_type='pdf') }}">Pobierz PDF</a>
+            </li>
+            <li>
+                <a href="{{ url_for('/download_qr/<filename>.DownloadQrcodeFile', filename=filename, file_type='png') }}">Pobierz PNG</a>
+            </li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

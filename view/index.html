@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>Login page</title>
+</head>
+<body>
+    
+        <div class="navbar">
+            <h1>QrkodGenrator</h1>
+            <a href="{{ url_for('register.RegisterPage') }}" class="register-link">Zarejestruj się</a>
+        </div>
+        <div class="main">
+            <h1>Logowanie</h1>
+            
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            
+            <form method="POST" action="{{ url_for('login.LoginPage') }}">
+                <label for="username">Login:</label>
+                <input type="text" name="username" id="username" required><br><br>
+                
+                <label for="password">Hasło:</label>
+                <input type="password" name="password" id="password" required><br><br>
+                
+                <input type="submit" value="Zaloguj">
+            </form>
+
+            <!-- Przekierowanie do strony rejestracji -->
+    
+        </div>
+</body>
+</html>

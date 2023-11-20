@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>qrkod page</title>
+</head>
+<body>
+
+    <div class="main">
+    <form method="POST" action="{{ url_for('/qrkodgenerator.QrcodeGenrator') }}">
+        <label for="link">Link do strony:</label>
+        <input type="text" name="link" id="link" required><br><br>
+        
+        <label for="filename">Nazwa pliku:</label>
+        <input type="text" name="filename" id="filename" required><br><br>
+
+        <label for="fill_color">Kolor kodu qr:</label>
+        <input type="text" name="fill_color" id="fill_color" required><br><br>
+
+        <label for="back_color">Kolor tła qr:</label>
+        <input type="text" name="back_color" id="back_color" required><br><br>
+
+        <input type="submit" value="Utworz qrkod">
+    </form>
+    </div>
+</body>
+</html>
+
+</html>
